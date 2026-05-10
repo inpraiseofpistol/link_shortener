@@ -10,5 +10,3 @@ class DBConfig(BaseSettings):
     def conn_url(self) -> str:
         return f"postgresql+asyncpg://{self.postgres_user}:{self.postgres_password}@{self.postgres_host}:5432/{self.postgres_db}"
 
-class AppConfig(BaseSettings):
-    base_url: str = "http://localhost:8000"
